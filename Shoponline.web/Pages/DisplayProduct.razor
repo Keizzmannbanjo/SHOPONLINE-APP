@@ -1,0 +1,19 @@
+﻿@inherits DisplayProductBase
+
+@foreach(var item in Products){
+    <div class="col-md-3 mb-2" style="height:350px;">
+                        <a href="/ProductDetails/@item.Id" class="d-block h-100">
+                            <div class="card h-100">
+                                <img class="img-thumbnail h-50" src="@item.ImageUrl" />
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">
+                                        @item.Name
+                                    </h5>
+                                    <p class="card-text">
+                                       <b> @item.Price.ToString("C")</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+}
